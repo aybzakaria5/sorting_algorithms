@@ -1,4 +1,4 @@
-include "sort.h"
+#include "sort.h"
 /**
  * bubble_sort - a function that bubbke sort and given array
  * @array: the array given
@@ -8,13 +8,13 @@ include "sort.h"
 
 void bubble_sort(int *array, size_t size)
 {
-	sizet_t emp;
-	int i, sap = 1;
+	size_t i,  s = size;
+	int tmp, swap = 1;
 
 	while (swap == 1)
 	{
 		swap = 0;
-		for (i = 0; i < size - 1; i++)
+		for (i = 0; i < s - 1; i++)
 		{
 			if (array[i] > array[i + 1])
 			{
@@ -25,6 +25,6 @@ void bubble_sort(int *array, size_t size)
 				swap = 1;
 			}
 		}
-		size--;
+		s = s - 1;
 	}
 }
