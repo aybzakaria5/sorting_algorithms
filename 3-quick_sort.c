@@ -31,10 +31,12 @@ size_t lomuto_partition(int *array, size_t low, size_t high, size_t size)
 		}
 		j++;
 	}
-
-	array[high] = array[i];
-	array[i] = pivot;
-	print_array(array, size);
+	if (array[high] != array[i])
+	{
+		array[high] = array[i];
+		array[i] = pivot;
+		print_array(array, size);
+	}
 	return (i);
 }
 
